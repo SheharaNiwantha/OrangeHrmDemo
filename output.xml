@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-20T18:06:30.180590" rpa="false" schemaversion="5">
+<suite id="s1" name="TC Login" source="e:\VS Code\OrangeHrm\TestCases\TC_Login.robot">
+<test id="s1-t1" name="Valid Login" line="12">
+<kw name="Open Login Page" owner="loginKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-20T18:06:30.743195" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-20T18:06:30.742099" elapsed="10.246572"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-20T18:06:40.989858" elapsed="0.049839"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-07-20T18:06:41.040105" elapsed="0.002043"/>
+</kw>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2025-07-20T18:06:30.738949" elapsed="10.303818"/>
+</kw>
+<kw name="Enter Username" owner="loginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-20T18:06:41.046557" level="INFO">Typing text 'Admin' into text field 'name:username'.</msg>
+<arg>${userName}</arg>
+<arg>${UsernameValue}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T18:06:41.045076" elapsed="0.989817"/>
+</kw>
+<arg>${USERNAME_VALUE}</arg>
+<status status="PASS" start="2025-07-20T18:06:41.043973" elapsed="0.991275"/>
+</kw>
+<kw name="Enter Password" owner="loginKeywords">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-07-20T18:06:42.038348" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg time="2025-07-20T18:06:42.084168" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${passWord}</arg>
+<arg>${PasswordValue}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T18:06:42.037371" elapsed="0.115507"/>
+</kw>
+<arg>${PASSWORD_VALUE}</arg>
+<status status="PASS" start="2025-07-20T18:06:42.036254" elapsed="0.117019"/>
+</kw>
+<kw name="Click Login Button" owner="loginKeywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-20T18:06:42.156893" level="INFO">Clicking button 'xpath://button[normalize-space()='Login']'.</msg>
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T18:06:42.156027" elapsed="1.550968"/>
+</kw>
+<status status="PASS" start="2025-07-20T18:06:42.154754" elapsed="1.553445"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-20T18:06:43.709813" elapsed="2.265395"/>
+</kw>
+<doc>Test case for valid login</doc>
+<status status="PASS" start="2025-07-20T18:06:30.736833" elapsed="15.240171"/>
+</test>
+<status status="PASS" start="2025-07-20T18:06:30.187110" elapsed="15.793891"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TC Login" id="s1" pass="1" fail="0" skip="0">TC Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
