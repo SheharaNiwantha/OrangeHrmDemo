@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-22T12:20:34.054427" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-22T12:20:00.408932" rpa="false" schemaversion="5">
 <suite id="s1" name="TC Login" source="E:\VS Code\OrangeHrm\TestCases\TC_Login.robot">
 <test id="s1-t1" name="Valid Login" line="13">
 <kw name="Open Login Page" owner="loginKeywords">
@@ -80,8 +80,7 @@
 <doc>Test case for valid login</doc>
 <status status="PASS" start="2025-07-22T12:20:00.616381" elapsed="32.974076"/>
 </test>
-<doc>[https://pabot.org/?ref=log|Pabot] result from 1 executions.</doc>
-<status status="PASS" start="2025-07-22T12:20:00.421000" elapsed="32.974000"/>
+<status status="PASS" start="2025-07-22T12:20:00.421784" elapsed="33.172721"/>
 </suite>
 <statistics>
 <total>
