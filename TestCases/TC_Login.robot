@@ -1,6 +1,7 @@
 *** Settings ***
 Library           SeleniumLibrary
 Resource          ../Resources/loginKeywords.robot
+Variables         ../PageObjects/loginLocators.py
 
 *** Variables ***
 ${URL}             https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
@@ -15,4 +16,5 @@ Valid Login
     Enter Username     ${USERNAME_VALUE}
     Enter Password     ${PASSWORD_VALUE}
     Click Login Button
-    Close Browser
+    Verfy Login Success  
+    Tear Down   

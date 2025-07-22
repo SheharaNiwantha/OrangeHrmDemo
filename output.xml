@@ -1,68 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-20T18:06:30.180590" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-21T12:41:20.807709" rpa="false" schemaversion="5">
 <suite id="s1" name="TC Login" source="e:\VS Code\OrangeHrm\TestCases\TC_Login.robot">
-<test id="s1-t1" name="Valid Login" line="12">
+<test id="s1-t1" name="Valid Login" line="13">
 <kw name="Open Login Page" owner="loginKeywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-07-20T18:06:30.743195" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg time="2025-07-21T12:41:21.072803" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
 <arg>${Url}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-07-20T18:06:30.742099" elapsed="10.246572"/>
+<status status="PASS" start="2025-07-21T12:41:21.072199" elapsed="3.972366"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-07-20T18:06:40.989858" elapsed="0.049839"/>
+<status status="PASS" start="2025-07-21T12:41:25.045210" elapsed="0.046113"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>5s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-07-20T18:06:41.040105" elapsed="0.002043"/>
+<status status="PASS" start="2025-07-21T12:41:25.091717" elapsed="0.001885"/>
 </kw>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-07-20T18:06:30.738949" elapsed="10.303818"/>
+<status status="PASS" start="2025-07-21T12:41:21.070959" elapsed="4.023086"/>
 </kw>
 <kw name="Enter Username" owner="loginKeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-20T18:06:41.046557" level="INFO">Typing text 'Admin' into text field 'name:username'.</msg>
+<msg time="2025-07-21T12:41:25.096768" level="INFO">Typing text 'Admin' into text field 'name:username'.</msg>
 <arg>${userName}</arg>
 <arg>${UsernameValue}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-20T18:06:41.045076" elapsed="0.989817"/>
+<status status="PASS" start="2025-07-21T12:41:25.095927" elapsed="0.474155"/>
 </kw>
 <arg>${USERNAME_VALUE}</arg>
-<status status="PASS" start="2025-07-20T18:06:41.043973" elapsed="0.991275"/>
+<status status="PASS" start="2025-07-21T12:41:25.095047" elapsed="0.475374"/>
 </kw>
 <kw name="Enter Password" owner="loginKeywords">
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-07-20T18:06:42.038348" level="INFO">Typing password into text field 'name:password'.</msg>
-<msg time="2025-07-20T18:06:42.084168" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-07-21T12:41:25.572342" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg time="2025-07-21T12:41:25.626459" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${passWord}</arg>
 <arg>${PasswordValue}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-20T18:06:42.037371" elapsed="0.115507"/>
+<status status="PASS" start="2025-07-21T12:41:25.571721" elapsed="0.125205"/>
 </kw>
 <arg>${PASSWORD_VALUE}</arg>
-<status status="PASS" start="2025-07-20T18:06:42.036254" elapsed="0.117019"/>
+<status status="PASS" start="2025-07-21T12:41:25.571028" elapsed="0.126123"/>
 </kw>
 <kw name="Click Login Button" owner="loginKeywords">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-07-20T18:06:42.156893" level="INFO">Clicking button 'xpath://button[normalize-space()='Login']'.</msg>
+<msg time="2025-07-21T12:41:25.698703" level="INFO">Clicking button 'xpath://button[normalize-space()='Login']'.</msg>
 <arg>${loginButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-20T18:06:42.156027" elapsed="1.550968"/>
+<status status="PASS" start="2025-07-21T12:41:25.698222" elapsed="0.072353"/>
 </kw>
-<status status="PASS" start="2025-07-20T18:06:42.154754" elapsed="1.553445"/>
+<status status="PASS" start="2025-07-21T12:41:25.697671" elapsed="0.073522"/>
 </kw>
+<kw name="Verfy Login Success" owner="loginKeywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${dashboardElement}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-21T12:41:25.773501" elapsed="1.964159"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-07-21T12:41:27.767888" level="INFO">Element 'xpath://h6[normalize-space()='Dashboard']' is displayed.</msg>
+<arg>${dashboardElement}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-21T12:41:27.738547" elapsed="0.030033"/>
+</kw>
+<status status="PASS" start="2025-07-21T12:41:25.772380" elapsed="1.996665"/>
+</kw>
+<kw name="Tear Down" owner="loginKeywords">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-07-20T18:06:43.709813" elapsed="2.265395"/>
+<status status="PASS" start="2025-07-21T12:41:27.772062" elapsed="2.303428"/>
+</kw>
+<status status="PASS" start="2025-07-21T12:41:27.770871" elapsed="2.305590"/>
 </kw>
 <doc>Test case for valid login</doc>
-<status status="PASS" start="2025-07-20T18:06:30.736833" elapsed="15.240171"/>
+<status status="PASS" start="2025-07-21T12:41:21.069552" elapsed="9.009052"/>
 </test>
-<status status="PASS" start="2025-07-20T18:06:30.187110" elapsed="15.793891"/>
+<status status="PASS" start="2025-07-21T12:41:20.811836" elapsed="9.273045"/>
 </suite>
 <statistics>
 <total>

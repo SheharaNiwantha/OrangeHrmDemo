@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Variables    ../PageObjects/loginLocators.py
-
+Resource    ../Resources/loginKeywords.robot
 *** Keywords ***
 Open Login Page
     [Arguments]    ${Url}    ${Browser}
@@ -19,3 +19,11 @@ Enter Password
 
 Click Login Button
     Click Button    ${loginButton}
+
+
+Verfy Login Success
+    Wait Until Page Contains Element    ${dashboardElement}        10s
+    Element Should Be Visible   ${dashboardElement}
+
+Tear Down
+    Close Browser
