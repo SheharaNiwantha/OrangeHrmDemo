@@ -5,7 +5,7 @@ Variables         ../PageObjects/loginLocators.py
 
 *** Variables ***
 ${URL}             https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
-${BROWSER}         Chrome
+${BROWSER}         Headless Chrome
 ${USERNAME_VALUE}  Admin
 ${PASSWORD_VALUE}  admin123
 

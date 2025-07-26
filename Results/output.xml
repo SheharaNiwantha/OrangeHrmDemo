@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-22T13:12:11.663630" rpa="false" schemaversion="5">
+<suite id="s1" name="TC Login" source="E:\VS Code\OrangeHrm\TestCases\TC_Login.robot">
+<test id="s1-t1" name="Valid Login" line="13">
+<kw name="Open Login Page" owner="loginKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-22T13:12:01.838493" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-22T13:12:01.838276" elapsed="4.814500"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-22T13:12:06.653080" elapsed="0.031439"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-07-22T13:12:06.684700" elapsed="0.001649"/>
+</kw>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2025-07-22T13:12:01.837673" elapsed="4.848798"/>
+</kw>
+<kw name="Enter Username" owner="loginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-22T13:12:06.687500" level="INFO">Typing text 'Admin' into text field 'name:username'.</msg>
+<arg>${userName}</arg>
+<arg>${UsernameValue}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-22T13:12:06.687060" elapsed="1.069151"/>
+</kw>
+<arg>${USERNAME_VALUE}</arg>
+<status status="PASS" start="2025-07-22T13:12:06.686670" elapsed="1.069701"/>
+</kw>
+<kw name="Enter Password" owner="loginKeywords">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-07-22T13:12:07.757116" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg time="2025-07-22T13:12:07.780012" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${passWord}</arg>
+<arg>${PasswordValue}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-22T13:12:07.756901" elapsed="0.060751"/>
+</kw>
+<arg>${PASSWORD_VALUE}</arg>
+<status status="PASS" start="2025-07-22T13:12:07.756570" elapsed="0.061198"/>
+</kw>
+<kw name="Click Login Button" owner="loginKeywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-22T13:12:07.818416" level="INFO">Clicking button 'xpath://button[normalize-space()='Login']'.</msg>
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-22T13:12:07.818218" elapsed="0.065970"/>
+</kw>
+<status status="PASS" start="2025-07-22T13:12:07.817922" elapsed="0.066409"/>
+</kw>
+<kw name="Verfy Login Success" owner="loginKeywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${dashboardElement}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-22T13:12:07.884775" elapsed="1.369120"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-07-22T13:12:09.267588" level="INFO">Element 'xpath://h6[normalize-space()='Dashboard']' is displayed.</msg>
+<arg>${dashboardElement}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-22T13:12:09.254102" elapsed="0.013589"/>
+</kw>
+<status status="PASS" start="2025-07-22T13:12:07.884490" elapsed="1.383301"/>
+</kw>
+<kw name="Tear Down" owner="loginKeywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-22T13:12:09.268235" elapsed="2.133405"/>
+</kw>
+<status status="PASS" start="2025-07-22T13:12:09.267954" elapsed="2.134019"/>
+</kw>
+<doc>Test case for valid login</doc>
+<status status="PASS" start="2025-07-22T13:12:01.837163" elapsed="9.565243"/>
+</test>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 1 executions.</doc>
+<status status="PASS" start="2025-07-22T13:12:01.648000" elapsed="9.566000"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TC Login" id="s1" pass="1" fail="0" skip="0">TC Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

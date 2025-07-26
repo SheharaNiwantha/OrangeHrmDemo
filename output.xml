@@ -1,87 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-22T12:20:34.054427" rpa="false" schemaversion="5">
-<suite id="s1" name="TC Login" source="E:\VS Code\OrangeHrm\TestCases\TC_Login.robot">
-<test id="s1-t1" name="Valid Login" line="13">
-<kw name="Open Login Page" owner="loginKeywords">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-24T11:48:17.209508" rpa="false" schemaversion="5">
+<suite id="s1" name="TC UserManagement" source="e:\VS Code\OrangeHrm\TestCases\TC_UserManagement.robot">
+<test id="s1-t1" name="User Management - Admin Login" line="13">
+<kw name="Open Admin User Management Page" owner="userManagement">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-07-22T12:20:00.618305" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg time="2025-07-24T11:48:17.747982" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
 <arg>${Url}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-07-22T12:20:00.618085" elapsed="17.255250"/>
+<status status="PASS" start="2025-07-24T11:48:17.747432" elapsed="4.700966"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-07-22T12:20:17.873710" elapsed="0.033101"/>
+<status status="PASS" start="2025-07-24T11:48:22.449784" elapsed="0.030918"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>5s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-07-22T12:20:17.907139" elapsed="0.002214"/>
+<status status="PASS" start="2025-07-24T11:48:22.482059" elapsed="0.003657"/>
 </kw>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<status status="PASS" start="2025-07-22T12:20:00.616913" elapsed="17.292633"/>
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<status status="PASS" start="2025-07-24T11:48:17.745687" elapsed="4.740445"/>
 </kw>
-<kw name="Enter Username" owner="loginKeywords">
+<kw name="Enter Admin Username" owner="userManagement">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-22T12:20:17.911115" level="INFO">Typing text 'Admin' into text field 'name:username'.</msg>
+<msg time="2025-07-24T11:48:22.489406" level="INFO">Typing text 'admin' into text field 'name:username'.</msg>
 <arg>${userName}</arg>
 <arg>${UsernameValue}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-22T12:20:17.910452" elapsed="5.271827"/>
+<status status="PASS" start="2025-07-24T11:48:22.488151" elapsed="1.095402"/>
 </kw>
-<arg>${USERNAME_VALUE}</arg>
-<status status="PASS" start="2025-07-22T12:20:17.909868" elapsed="5.272729"/>
+<arg>${UsernameValue}</arg>
+<status status="PASS" start="2025-07-24T11:48:22.487192" elapsed="1.096882"/>
 </kw>
-<kw name="Enter Password" owner="loginKeywords">
+<kw name="Enter admin Password" owner="userManagement">
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-07-22T12:20:23.183627" level="INFO">Typing password into text field 'name:password'.</msg>
-<msg time="2025-07-22T12:20:23.225681" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-07-24T11:48:23.586386" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg time="2025-07-24T11:48:23.626018" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${passWord}</arg>
 <arg>${PasswordValue}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-22T12:20:23.183361" elapsed="0.091714"/>
+<status status="PASS" start="2025-07-24T11:48:23.585662" elapsed="0.115961"/>
 </kw>
-<arg>${PASSWORD_VALUE}</arg>
-<status status="PASS" start="2025-07-22T12:20:23.182921" elapsed="0.092284"/>
+<arg>${PasswordValue}</arg>
+<status status="PASS" start="2025-07-24T11:48:23.584810" elapsed="0.117352"/>
 </kw>
-<kw name="Click Login Button" owner="loginKeywords">
+<kw name="Click Login Button Admin Page" owner="userManagement">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-07-22T12:20:23.276014" level="INFO">Clicking button 'xpath://button[normalize-space()='Login']'.</msg>
+<msg time="2025-07-24T11:48:23.705091" level="INFO">Clicking button 'xpath://button[normalize-space()='Login']'.</msg>
 <arg>${loginButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-22T12:20:23.275748" elapsed="6.534814"/>
+<status status="PASS" start="2025-07-24T11:48:23.704314" elapsed="0.103622"/>
 </kw>
-<status status="PASS" start="2025-07-22T12:20:23.275419" elapsed="6.535396"/>
+<status status="PASS" start="2025-07-24T11:48:23.703255" elapsed="0.105285"/>
 </kw>
-<kw name="Verfy Login Success" owner="loginKeywords">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${dashboardElement}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-07-22T12:20:29.811404" elapsed="1.479595"/>
+<kw name="Click Admin Menu" owner="userManagement">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-24T11:48:23.811391" level="INFO">Clicking element 'xpath://*[@href='/web/index.php/admin/viewAdminModule']'.</msg>
+<arg>${admin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-24T11:48:23.810510" elapsed="13.465631"/>
 </kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-07-22T12:20:31.309583" level="INFO">Element 'xpath://h6[normalize-space()='Dashboard']' is displayed.</msg>
-<arg>${dashboardElement}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-07-22T12:20:31.291191" elapsed="0.018515"/>
+<status status="PASS" start="2025-07-24T11:48:23.809661" elapsed="13.467000"/>
 </kw>
-<status status="PASS" start="2025-07-22T12:20:29.811048" elapsed="1.498796"/>
-</kw>
-<kw name="Tear Down" owner="loginKeywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-07-22T12:20:31.310450" elapsed="2.278327"/>
-</kw>
-<status status="PASS" start="2025-07-22T12:20:31.310092" elapsed="2.279049"/>
-</kw>
-<doc>Test case for valid login</doc>
-<status status="PASS" start="2025-07-22T12:20:00.616381" elapsed="32.974076"/>
+<doc>This test case logs into the admin user management page.</doc>
+<status status="PASS" start="2025-07-24T11:48:17.744114" elapsed="19.533587"/>
 </test>
-<doc>[https://pabot.org/?ref=log|Pabot] result from 1 executions.</doc>
-<status status="PASS" start="2025-07-22T12:20:00.421000" elapsed="32.974000"/>
+<status status="PASS" start="2025-07-24T11:48:17.216875" elapsed="20.063690"/>
 </suite>
 <statistics>
 <total>
@@ -90,7 +76,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="TC Login" id="s1" pass="1" fail="0" skip="0">TC Login</stat>
+<stat name="TC UserManagement" id="s1" pass="1" fail="0" skip="0">TC UserManagement</stat>
 </suite>
 </statistics>
 <errors>
